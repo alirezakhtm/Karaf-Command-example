@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.khtm.test.karaf</groupId>
+    <artifactId>CommandLine</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>CommandLineApi</module>
+        <module>CommandLineProvider</module>
+        <module>CommandLineCommand</module>
+        <module>CommandLineFeature</module>
+    </modules>
+
+    <properties>
+        <maven.bundle.plugin.version>4.0.0</maven.bundle.plugin.version>
+    </properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.karaf.tooling</groupId>
+                    <artifactId>karaf-services-maven-plugin</artifactId>
+                    <version>4.2.1</version>
+                    <executions>
+                        <execution>
+                            <id>service-metadata-generate</id>
+                            <phase>process-classes</phase>
+                            <goals>
+                                <goal>service-metadata-generate</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+
+</project>

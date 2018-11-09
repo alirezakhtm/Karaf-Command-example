@@ -1,0 +1,3 @@
+com/khtm/test/karaf/command/api/User.class
+com/khtm/test/karaf/command/api/UserService.class
+com/khtm/test/karaf/command/api/UserServiceRedis.class

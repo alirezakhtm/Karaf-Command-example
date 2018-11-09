@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1541183445279
+Build-Jdk: 1.8.0_161
+Built-By: alireza
+Bundle-ManifestVersion: 2
+Bundle-Name: KHTM :: TEST :: KARAF :: COMMAN-LINE :: API
+Bundle-SymbolicName: com.khtm.test.karaf.CommandLineApi
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.khtm.test.karaf.command.api;version="1.0.0"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6))"
+Tool: Bnd-4.0.0.201805111645

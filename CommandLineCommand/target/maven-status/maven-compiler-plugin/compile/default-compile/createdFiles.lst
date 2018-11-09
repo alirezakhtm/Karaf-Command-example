@@ -1,0 +1,10 @@
+com/khtm/test/karaf/command/command/completer/CompleterRedis.class
+com/khtm/test/karaf/command/command/command/ListUserCommand.class
+com/khtm/test/karaf/command/command/command/ListUserRedisCommand.class
+com/khtm/test/karaf/command/command/command/AddUserCommand.class
+com/khtm/test/karaf/command/command/completer/Completer.class
+com/khtm/test/karaf/command/command/command/AddUserToRedisCommand.class
+com/khtm/test/karaf/command/command/command/RemoveAllUserRedisCommand.class
+com/khtm/test/karaf/command/command/command/RemoveUserRedisCommand.class
+com/khtm/test/karaf/command/command/command/RemoveAllUserCommand.class
+com/khtm/test/karaf/command/command/command/RemoveUserCommand.class

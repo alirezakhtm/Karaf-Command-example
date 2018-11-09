@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<features   name="khtm-test-command-1.0-SNAPSHOT"
+            xmlns="http://karaf.apache.org/xmlns/features/v1.4.0"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.4.0">
+
+    <feature name="CommandLineApi" version="1.0-SNAPSHOT">
+        <bundle>mvn:com.khtm.test.karaf/CommandLineApi/1.0-SNAPSHOT</bundle>
+    </feature>
+
+    <feature name="CommandLineProvider" version="1.0-SNAPSHOT">
+        <feature version="1.0-SNAPSHOT">CommandLineApi</feature>
+        <bundle>wrap:mvn:com.google.code.gson/gson/2.8.5</bundle>
+        <bundle>wrap:mvn:org.apache.commons/commons-pool2/2.6.0</bundle>
+        <bundle>wrap:mvn:redis.clients/jedis/2.9.0</bundle>
+        <bundle>mvn:com.khtm.test.karaf/CommandLineProvider/1.0-SNAPSHOT</bundle>
+    </feature>
+
+    <!--
+    <feature name="gson-embed" version="1.0-SNAPSHOT">
+        <bundle>mvn:com.google.code.gson/gson/2.8.5</bundle>
+    </feature>
+
+    <feature name="jedis-embed" version="1.0-SNAPSHOT">
+        <bundle>mvn:redis.clients/jedis/2.9.0</bundle>
+    </feature>
+    -->
+
+    <feature name="CommandLine" version="1.0-SNAPSHOT">
+        <feature version="1.0-SNAPSHOT">CommandLineProvider</feature>
+        <conditional>
+            <condition>shell</condition>
+            <bundle>mvn:com.khtm.test.karaf/CommandLineCommand/1.0-SNAPSHOT</bundle>
+        </conditional>
+    </feature>
+
+</features>

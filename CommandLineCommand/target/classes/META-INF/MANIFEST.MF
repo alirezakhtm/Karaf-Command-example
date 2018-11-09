@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1541183451212
+Build-Jdk: 1.8.0_161
+Built-By: alireza
+Bundle-ManifestVersion: 2
+Bundle-Name: KHTM :: TEST :: KARAF :: COMMAN-LINE :: COMMAND
+Bundle-SymbolicName: com.khtm.test.karaf.CommandLineCommand
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.khtm.test.karaf.command.command.completer;uses:="org
+ .apache.karaf.shell.api.action.lifecycle,org.apache.karaf.shell.api.con
+ sole";version="1.0.0",com.khtm.test.karaf.command.command.command;uses:
+ ="org.apache.karaf.shell.api.action,org.apache.karaf.shell.api.action.l
+ ifecycle";version="1.0.0"
+Import-Package: com.khtm.test.karaf.command.api;version="[1.0,2)",org.ap
+ ache.karaf.shell.api.action;version="[4,5)",org.apache.karaf.shell.api.
+ action.lifecycle;version="[4,5)",org.apache.karaf.shell.api.console;ver
+ sion="[4,5)",org.apache.karaf.shell.support.completers;version="[4,5)",
+ org.apache.karaf.shell.support.table;version="[4,5)",com.khtm.test.kara
+ f.command.command.completer,org.osgi.framework,org.slf4j;version="[1.7,
+ 2)"
+Karaf-Commands: com.khtm.test.karaf.command.command.command,com.khtm.tes
+ t.karaf.command.command.completer
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-4.0.0.201805111645

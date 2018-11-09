@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>CommandLine</artifactId>
+        <groupId>com.khtm.test.karaf</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>CommandLineCommand</artifactId>
+    <name>KHTM :: TEST :: KARAF :: COMMAN-LINE :: COMMAND</name>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>bundle</packaging>
+
+    <dependencies>
+        <!-- karaf shell -->
+        <dependency>
+            <groupId>org.apache.karaf.shell</groupId>
+            <artifactId>org.apache.karaf.shell.core</artifactId>
+            <version>4.2.1</version>
+        </dependency>
+        <!-- CommandLine Api -->
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>CommandLineApi</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.karaf.tooling</groupId>
+                <artifactId>karaf-services-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>4.0.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Private-Package>
+                            com.khtm.test.karaf.command.command.command,
+                            com.khtm.test.karaf.command.command.completer
+                        </Private-Package>
+                        <Import-Package>
+                            com.khtm.test.karaf.command.api,
+                            org.apache.karaf.shell*;version="[4,5)",
+                            *
+                        </Import-Package>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

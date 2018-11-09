@@ -1,0 +1,3 @@
+com/khtm/test/karaf/command/provider/Activator.class
+com/khtm/test/karaf/command/provider/UserServiceRedisImp.class
+com/khtm/test/karaf/command/provider/UserServiceImp.class
