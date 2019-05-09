@@ -1,6 +1,6 @@
 # Install Application
 
-* Requirement:
+* Requirements:
     * Karaf 4.x.x
     * Redis
     * jdk1.8
